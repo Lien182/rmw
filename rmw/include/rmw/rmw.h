@@ -539,6 +539,14 @@ rmw_subscription_count_matched_publishers(
   const rmw_subscription_t * subscription,
   size_t * publisher_count);
 
+
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
+rmw_subscription_count_unread(
+  const rmw_subscription_t * subscription,
+  size_t * unread_count);
+
 /// Take an incoming message from a subscription.
 /**
  * Take an incoming ROS message from a given subscription.
