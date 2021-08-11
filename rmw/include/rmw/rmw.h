@@ -701,6 +701,15 @@ rmw_send_response(
   rmw_request_id_t * request_header,
   void * ros_response);
 
+
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
+rmw_service_count_unread_requests(
+  const rmw_service_t * service,
+  size_t * unread_count);
+
+
 // TODO(wjwwood): refactor this API to return a return code when updated to use an allocator
 /// Create a guard condition and return a handle to that guard condition.
 /**
